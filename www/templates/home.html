@@ -1,0 +1,13 @@
+<html>
+<head>
+  <title>Hello,{{ user.nickname }}</title>
+  <meta charset="UTF-8" />
+  <script src="static/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+</head>
+<body>
+    {% for img in imgs %}
+    <p><img src="{{ img['src'] }}" /></p>
+    {% endfor %}
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>首页 - 李云涛的官方网站</title>
+<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="static/css/chocolat.css" type="text/css" media="screen" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="李云涛,liyuntao.top,aliyuntao.top" />
+<meta name="description" content="Li Yuntao，a nice man."/> 
+<link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="static/js/jquery-1.11.1.min.js"></script>
+<!--scrolling-->
+<script type="text/javascript" src="static/js/move-top.js"></script>
+<script type="text/javascript" src="static/js/easing.js"></script>
+<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/leancloud/av.min.js"></script>
+<script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript" src="static/js/log.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+		});
+	});
+	try{
+		if(window.console && window.console.log)
+			console.log("%c这个世界上，涛哥最帅。","color:red;font-size:35px;font-family: 'STXingkai';");
+			console.log("%c恭喜你发现了这个秘密，赶快与大家分享这个秘密吧！","color:red;font-size:26px;font-family: 'STKaiti';");
+	}catch(e){
+	}
+</script>
+<!--scrolling-->
+</head>
+<body>
+
+
+<!--gallery -->
+<script src="static/js/jquery.chocolat.js"></script>
+<!--light-box-files -->
+<script type="text/javascript">
+		$(function() {
+			$('.moments-bottom a').Chocolat();
+		});
+		</script>
+<!--gallery js-->
+<div id="gallery" class="gallery">
+	<div class="container">
+         <div class="gallery-info">
+         	{% for img in imgs %}
+				<div class="col-md-4 galry-grids moments-bottom">
+					<a class="b-link-stripe b-animate-go" href="{{ img }}">
+						<img src="{{ img }}" class="img-responsive" alt="">
+						<div class="b-wrapper">
+							<span class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive" src="static/images/e.png" alt=""/>
+							</span>
+						</div>
+					</a>
+				</div>
+   	 		{% endfor %}
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="container">
+		<p>Copyrights © 2016 Li Yuntao. All rights reserved | 上海市浦东新区祖冲之路2290号</p>
+		<div class="arrow">
+			<a class="scroll" href="#home"><img src="static/images/top.png" alt=""></a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+</script>
+<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!---->
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>一则糗事</title>
+  <meta charset="UTF-8" />
+</head>
+<body>
+  <p>{{ message }}!</p>
+  <input type="button" value="alert">
+  <script>
+  	$('input').click(function(){
+  		$.ajax({
+  			url : "/getString",
+  			type : "get",
+  			dataType : "text",
+  			success : function(msg){
+  				alert(1);
+  			}
+  		});
+  	})
+  </script>
+</body>
+</html>
+
