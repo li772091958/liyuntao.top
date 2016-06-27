@@ -2,8 +2,10 @@
 # coding=utf-8
 
 from flask import Flask, render_template
-from html import post
 from bs4 import BeautifulSoup
+
+from html import post
+from getAllImgsName import getNames
 
 app = Flask(__name__)
 
@@ -20,10 +22,7 @@ def home():
     
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    imageName = range(1001,1100)
-    imgs = []
-    for item in imageName:
-        imgs.append('static/images/show/'+str(item)+'.jpg')
+    imgs = getNames()
     return render_template('index.html', imgs = imgs)
 
 if __name__ == '__main__':
