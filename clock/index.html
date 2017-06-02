@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>时钟动画</title>
+<style type="text/css">
+@keyframes h_seconds {}
+@keyframes h_minutes {}
+@keyframes h_hours {}
+@keyframes d_seconds {
+    to{transform:translateY(-120em)}
+}
+@keyframes d_minutes {
+    to {
+        transform:translateY(-120em)
+    }
+}
+@keyframes d_hours {
+    to {
+        transform:translateY(-48em)
+    }
+}
+#seconds-hand {
+    /*秒针跳动*/
+    /*
+    -webkit-animation: h_seconds 60s steps(60,end) 0s infinite;
+    -moz-animation: h_seconds 60s steps(60,end) 0s infinite;
+    animation: h_seconds 60s steps(60,end) 0s infinite;
+    */
+    /*秒针匀速*/
+    -webkit-animation: h_seconds 60s infinite linear;
+    -moz-animation: h_seconds 60s infinite linear;
+    animation: h_seconds 60s infinite linear;
+}
+#minutes-hand {
+    -webkit-animation: h_minutes 3600s linear 0s infinite;
+    -moz-animation: h_minutes 3600s linear 0s infinite;
+    animation: h_minutes 3600s linear 0s infinite;
+}
+#hours-hand {
+    -webkit-animation: h_hours 43200s linear 0s infinite;
+    -moz-animation: h_hours 43200s linear 0s infinite;
+    animation: h_hours 43200s linear 0s infinite;
+}
+
+#digit-seconds li {
+	-webkit-animation: d_seconds 60s steps(60, end) 0s infinite;
+	-moz-animation: d_seconds 60s steps(60, end) 0s infinite;
+	animation: d_seconds 60s steps(60, end) 0s infinite;
+}
+#digit-minutes li {
+	-webkit-animation: d_minutes 3600s steps(60, end) 0s infinite;
+	-moz-animation: d_minutes 3600s steps(60, end) 0s infinite;
+	animation: d_minutes 3600s steps(60, end) 0s infinite;
+}
+#digit-hours li {
+	-webkit-animation: d_hours 86400s steps(24, end) 0s infinite;
+	-moz-animation: d_hours 86400s steps(24, end) 0s infinite;
+	animation: d_hours 86400s steps(24, end) 0s infinite;
+}
+
+
+
+
+</style>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="watch">
+  <div class="frame-face"></div>
+  
+  <ul class="minute-marks">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  
+  <div class="digital-wrap">
+    <ul class="digit-hours" id="digit-hours">
+      <li>00</li>
+      <li>01</li>
+      <li>02</li>
+      <li>03</li>
+      <li>04</li>
+      <li>05</li>
+      <li>06</li>
+      <li>07</li>
+      <li>08</li>
+      <li>09</li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+      <li>16</li>
+      <li>17</li>
+      <li>18</li>
+      <li>19</li>
+      <li>20</li>
+      <li>21</li>
+      <li>22</li>
+      <li>23</li>
+    </ul>
+    <ul class="digit-minutes" id="digit-minutes">
+      <li>00</li>
+      <li>01</li>
+      <li>02</li>
+      <li>03</li>
+      <li>04</li>
+      <li>05</li>
+      <li>06</li>
+      <li>07</li>
+      <li>08</li>
+      <li>09</li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+      <li>16</li>
+      <li>17</li>
+      <li>18</li>
+      <li>19</li>
+      <li>20</li>
+      <li>21</li>
+      <li>22</li>
+      <li>23</li>
+      <li>24</li>
+      <li>25</li>
+      <li>26</li>
+      <li>27</li>
+      <li>28</li>
+      <li>29</li>
+      <li>30</li>
+      <li>31</li>
+      <li>32</li>
+      <li>33</li>
+      <li>34</li>
+      <li>35</li>
+      <li>36</li>
+      <li>37</li>
+      <li>38</li>
+      <li>39</li>
+      <li>40</li>
+      <li>41</li>
+      <li>42</li>
+      <li>43</li>
+      <li>44</li>
+      <li>45</li>
+      <li>46</li>
+      <li>47</li>
+      <li>48</li>
+      <li>49</li>
+      <li>50</li>
+      <li>51</li>
+      <li>52</li>
+      <li>53</li>
+      <li>54</li>
+      <li>55</li>
+      <li>56</li>
+      <li>57</li>
+      <li>58</li>
+      <li>59</li>
+    </ul>
+    <ul class="digit-seconds" id="digit-seconds">
+      <li>00</li>
+      <li>01</li>
+      <li>02</li>
+      <li>03</li>
+      <li>04</li>
+      <li>05</li>
+      <li>06</li>
+      <li>07</li>
+      <li>08</li>
+      <li>09</li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+      <li>16</li>
+      <li>17</li>
+      <li>18</li>
+      <li>19</li>
+      <li>20</li>
+      <li>21</li>
+      <li>22</li>
+      <li>23</li>
+      <li>24</li>
+      <li>25</li>
+      <li>26</li>
+      <li>27</li>
+      <li>28</li>
+      <li>29</li>
+      <li>30</li>
+      <li>31</li>
+      <li>32</li>
+      <li>33</li>
+      <li>34</li>
+      <li>35</li>
+      <li>36</li>
+      <li>37</li>
+      <li>38</li>
+      <li>39</li>
+      <li>40</li>
+      <li>41</li>
+      <li>42</li>
+      <li>43</li>
+      <li>44</li>
+      <li>45</li>
+      <li>46</li>
+      <li>47</li>
+      <li>48</li>
+      <li>49</li>
+      <li>50</li>
+      <li>51</li>
+      <li>52</li>
+      <li>53</li>
+      <li>54</li>
+      <li>55</li>
+      <li>56</li>
+      <li>57</li>
+      <li>58</li>
+      <li>59</li>
+    </ul>
+  </div>
+ 
+  <ul class="digits">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+  </ul>
+  
+  <div class="hours-hand" id="hours-hand"></div>
+  <div class="minutes-hand" id="minutes-hand"></div>
+  <div class="seconds-hand" id="seconds-hand"></div>
+</div>
+
+<script>
+    var time = new Date();
+    var hour = time.getHours()%12;
+    var minute = time.getMinutes();
+    var second = time.getSeconds();
+    
+    var css = document.styleSheets[0]
+    
+    var hour_deg = (hour + minute/60) * 360 / 12;
+    var minute_deg = (minute+second/60) * 360 / 60;
+    var second_deg = second * 360 / 60;
+    
+    var htmlOfHours ='',
+        htmlOfMinutes = '',
+        htmlOfSeconds = '';
+    for(var i=0,h=time.getHours(); i<24; i++){
+        h = h>23? h-24 : h;
+        htmlOfHours += '<li>'+ addZero(h) +'</li>';
+        h++;
+    }    
+    for(var i=0,m=minute; i<60; i++){
+        m = m>59 ? m-60 : m;
+        htmlOfMinutes += '<li>'+ addZero(m) +'</li>';
+        m++;
+    }    
+    for(var i=0,s=second; i<60; i++){
+        s = s>59 ? s-60 : s;
+        htmlOfSeconds += '<li>'+ addZero(s) +'</li>';
+        s++;
+    }
+    document.getElementById('digit-hours').innerHTML = htmlOfHours;
+    document.getElementById('digit-minutes').innerHTML = htmlOfMinutes;
+    document.getElementById('digit-seconds').innerHTML = htmlOfSeconds;
+    
+    css.cssRules[0].appendRule('from{transform: rotate('+second_deg+'deg)}')
+    css.cssRules[0].appendRule('to{transform: rotate('+(second_deg+360)+'deg)}')
+    
+    css.cssRules[1].appendRule('from{transform: rotate('+minute_deg+'deg)}')
+    css.cssRules[1].appendRule('to{transform: rotate('+(minute_deg+360)+'deg)}')
+    
+    css.cssRules[2].appendRule('from{transform: rotate('+hour_deg+'deg)}')
+    css.cssRules[2].appendRule('to{transform: rotate('+(hour_deg+360)+'deg)}')
+    
+    function addZero(number){
+        return number < 10 ? '0'+number : number;
+    }
+    
+</script>
+</body>
+</html>
